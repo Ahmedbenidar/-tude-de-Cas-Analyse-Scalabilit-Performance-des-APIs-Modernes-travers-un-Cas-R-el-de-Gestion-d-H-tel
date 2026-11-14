@@ -1,0 +1,4 @@
+POST /soap -> 200
+
+<?xml version='1.0' encoding='utf-8'?>
+<soapenv:Envelope xmlns:hotel="http://tp182.hotel/soap" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><hotel:getClientResponse><hotel:client><hotel:id>cli-000001</hotel:id><hotel:nom>Benidar</hotel:nom><hotel:prenom>Ahmed</hotel:prenom><hotel:email>ahmed.benidar@example.com</hotel:email><hotel:telephone>+212611111111</hotel:telephone></hotel:client></hotel:getClientResponse></soapenv:Body></soapenv:Envelope>

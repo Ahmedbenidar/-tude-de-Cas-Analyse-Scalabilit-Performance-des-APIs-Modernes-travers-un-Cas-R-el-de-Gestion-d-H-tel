@@ -1,0 +1,3 @@
+POST /graphql -> 200
+
+{"data": {"client": {"id": "cli-000001", "nom": "Benidar", "prenom": "Ahmed", "email": "ahmed.benidar@example.com"}}}

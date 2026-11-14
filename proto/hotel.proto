@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+package hotel;
+
+service HotelService {
+  rpc CreateClient(Client) returns (Client);
+  rpc GetClient(IdRequest) returns (Client);
+  rpc ListClients(Empty) returns (ClientList);
+  rpc UpdateClient(Client) returns (Client);
+  rpc DeleteClient(IdRequest) returns (DeleteResponse);
+
+  rpc CreateChambre(Chambre) returns (Chambre);
+  rpc GetChambre(IdRequest) returns (Chambre);
+  rpc ListChambres(Empty) returns (ChambreList);
+  rpc UpdateChambre(Chambre) returns (Chambre);
+  rpc DeleteChambre(IdRequest) returns (DeleteResponse);
+
+  rpc CreateReservation(Reservation) returns (Reservation);
+  rpc GetReservation(IdRequest) returns (Reservation);
+  rpc ListReservations(Empty) returns (ReservationList);
+  rpc UpdateReservation(Reservation) returns (Reservation);
+  rpc DeleteReservation(IdRequest) returns (DeleteResponse);
+}
+
+message Empty {}
+
+message IdRequest {
+  string id = 1;
+}
+
+message DeleteResponse {
+  bool success = 1;
+}
+
+message Client {
+  string id = 1;
+  string nom = 2;
+  string prenom = 3;
+  string email = 4;
+  string telephone = 5;
+}
+
+message ClientList {
+  repeated Client clients = 1;
+}
+
+message Chambre {
+  string id = 1;
+  string type = 2;
+  double prix = 3;
+  bool disponible = 4;
+}
+
+message ChambreList {
+  repeated Chambre chambres = 1;
+}
+
+message Reservation {
+  string id = 1;
+  string client_id = 2;
+  string chambre_id = 3;
+  string date_debut = 4;
+  string date_fin = 5;
+  string preferences = 6;
+}
+
+message ReservationList {
+  repeated Reservation reservations = 1;
+}

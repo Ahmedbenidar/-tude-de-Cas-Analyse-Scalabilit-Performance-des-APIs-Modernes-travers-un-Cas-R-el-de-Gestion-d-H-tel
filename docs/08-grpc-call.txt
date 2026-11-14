@@ -1,0 +1,5 @@
+﻿GetClient(cli-000001) -> Benidar Ahmed ahmed.benidar@example.com
+GetReservation(res-000001) -> cli-000001 ch-000001 2025-06-01 .. 2025-06-04
+Chambre: ch-000001 standard 80.0 dispo=True
+Chambre: ch-000002 double 120.0 dispo=True
+Chambre: ch-000003 suite 250.0 dispo=False

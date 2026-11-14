@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.log
+bench/smoke_*.json
+bench/t.json
+bench/t1000.json
+bench/full_run.log
+.vscode/

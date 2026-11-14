@@ -1,0 +1,4 @@
+GET /api/clients/cli-000001 -> 200
+
+{"email":"ahmed.benidar@example.com","id":"cli-000001","nom":"Benidar","prenom":"Ahmed","telephone":"+212611111111"}
+
